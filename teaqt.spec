@@ -1,6 +1,6 @@
 Summary:	A simple-in-use Qt based text editor
 Name:		teaqt
-Version:	18.0.1
+Version:	19.0.1
 Release:	%mkrel 1
 Group:		Editors
 License:	GPLv3+
@@ -19,8 +19,8 @@ Teaqt is a simple-in-use Qt-based text editor.
 %patch0 -p0
 
 %build
-%qmake_qt4
-%make LFLAGS="%{ldflags}"
+%qmake_qt4 QMAKE_CFLAGS="%{optflags}" QMAKE_CXXFLAGS="%{optflags}" QMAKE_LFLAGS="%{?ldflags}"
+%make
 
 %install
 rm -rf $RPM_BUILD_ROOT
