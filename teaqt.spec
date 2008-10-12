@@ -1,6 +1,6 @@
 Summary:	A simple-in-use Qt based text editor
 Name:		teaqt
-Version:	19.1.0
+Version:	20.0.0
 Release:	%mkrel 1
 Group:		Editors
 License:	GPLv3+
