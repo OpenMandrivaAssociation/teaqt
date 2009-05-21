@@ -1,12 +1,12 @@
 Summary:	A simple-in-use Qt based text editor
 Name:		teaqt
-Version:	23.1.1
+Version:	23.5.0
 Release:	%mkrel 1
 Group:		Editors
 License:	GPLv3+
 URL:		http://tea-editor.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/tea-editor/tea-%{version}.tar.bz2
-Patch0:		teaqt-22.2.0-prefix.patch
+Patch0:		teaqt-23.5.0-prefix.patch
 BuildRoot:	%{_tmppath}/%{name}-root
 Buildrequires:	qt4-devel
 BuildRequires:	imagemagick aspell-devel
@@ -16,7 +16,7 @@ Teaqt is a simple-in-use Qt-based text editor.
 
 %prep
 %setup -q -n tea-%version
-%patch0 -p0
+%patch0 -p1 -b .prefix
 
 %build
 %qmake_qt4
