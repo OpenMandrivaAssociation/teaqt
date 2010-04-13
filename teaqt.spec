@@ -1,6 +1,6 @@
 Summary:	A simple-in-use Qt based text editor
 Name:		teaqt
-Version:	27.0.2
+Version:	27.1.0
 Release:	%mkrel 1
 Group:		Editors
 License:	GPLv3+
