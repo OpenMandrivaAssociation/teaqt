@@ -1,12 +1,11 @@
 Summary:	A simple-in-use Qt based text editor
 Name:		teaqt
-Version:	29.0.3
+Version:	32.0.0
 Release:	%mkrel 1
 Group:		Editors
 License:	GPLv3+
 URL:		http://tea-editor.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/tea-editor/tea-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-root
+Source0:	http://downloads.sourceforge.net/project/tea-editor/tea-editor/%{version}/tea-%{version}.tar.bz2
 Buildrequires:	qt4-devel
 BuildRequires:	imagemagick aspell-devel
 
@@ -15,13 +14,13 @@ Teaqt is a simple-in-use Qt-based text editor.
 
 %prep
 %setup -q -n tea-%version
+find . -perm 0600 -exec chmod +r {} \;
 
 %build
 %qmake_qt4 PREFIX=%{_bindir}
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall_std INSTALL_ROOT=%buildroot
 
 mv %buildroot%_bindir/tea %buildroot%_bindir/%name
@@ -43,19 +42,6 @@ Terminal=false
 Type=Application
 Categories=Qt;TextEditor;Utility;
 EOF
-
-%if %mdkversion < 200900
-%post
-%update_menus
-%endif
-
-%if %mdkversion < 200900
-%postun
-%clean_menus
-%endif
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
