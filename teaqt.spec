@@ -1,6 +1,6 @@
 Summary:	A simple-in-use Qt based text editor
 Name:		teaqt
-Version:	32.0.1
+Version:	32.0.2
 Release:	%mkrel 1
 Group:		Editors
 License:	GPLv3+
@@ -14,14 +14,14 @@ Teaqt is a simple-in-use Qt-based text editor.
 
 %prep
 %setup -q -n tea-%version
-find . -perm 0600 -exec chmod +r {} \;
+find . -perm 0600 -exec chmod a+r {} \;
 
 %build
 %qmake_qt4 PREFIX=%{_bindir}
 %make
 
 %install
-%makeinstall_std INSTALL_ROOT=%buildroot
+make install INSTALL_ROOT=%buildroot
 
 mv %buildroot%_bindir/tea %buildroot%_bindir/%name
 
