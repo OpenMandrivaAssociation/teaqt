@@ -1,7 +1,7 @@
 Summary:	A simple-in-use Qt based text editor
 Name:		teaqt
 Version:	32.0.2
-Release:	%mkrel 1
+Release:	1
 Group:		Editors
 License:	GPLv3+
 URL:		http://tea-editor.sourceforge.net/
