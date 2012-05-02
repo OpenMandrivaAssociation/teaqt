@@ -1,6 +1,6 @@
 Summary:	A simple-in-use Qt based text editor
 Name:		teaqt
-Version:	32.0.2
+Version:	33.0.0
 Release:	1
 Group:		Editors
 License:	GPLv3+
@@ -13,7 +13,7 @@ BuildRequires:	imagemagick aspell-devel
 Teaqt is a simple-in-use Qt-based text editor.
 
 %prep
-%setup -q -n tea-%version
+%setup -q -n tea-%{version}
 find . -perm 0600 -exec chmod a+r {} \;
 
 %build
