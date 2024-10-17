@@ -6,7 +6,7 @@ Version:	63.1.0
 Release:	1
 Group:		Editors
 License:	GPLv3+
-URL:		http://tea.ourproject.org/
+URL:		https://tea.ourproject.org/
 Source0:	https://github.com/psemiletov/tea-qt/archive/%{version}.tar.gz
 BuildRequires:	qt5-devel
 BuildRequires:	imagemagick aspell-devel
